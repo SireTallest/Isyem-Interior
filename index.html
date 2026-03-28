@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title></title>
+  <title>Isyem — Interior Decorator & Furniture Designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="icon" type="image/png" href="asset/images/Logo-removebg-preview.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+
+  <!--DESKTOP TOP NAV 
+    This nav is hidden on mobile (display: none).
+    On screens 768px and wider, it becomes visible at the top.
+  -->
+  <header class="top-nav">
+    <div class="top-nav__inner">
+
+      <!-- LOGO  -->
+      <a href="#home" class="top-nav__logo">
+        <span class="logo-text">Isyem</span>
+        <span class="logo-sub">Interiors</span>
+      </a>
+
+      <!-- DESKTOP NAV LINKS -->
+      <nav class="top-nav__links" aria-label="Main navigation">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#gallery" class="nav-link">Gallery</a>
+        <a href="#reviews" class="nav-link">Reviews</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link nav-link--cta">Contact Us</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!--
+    MOBILE BOTTOM NAV
+    This is fixed to the bottom of the screen on mobile.
+    Hidden on desktop (display: none via media query).
+    Each item has an SVG icon + a label.
+  -->
+  <nav class="bottom-nav" aria-label="Mobile navigation">
+
+    <!-- HOME -->
+    <a href="#home" class="bottom-nav__item active" aria-label="Go to Home">
+
+      <svg class="bottom-nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M3 9.75L12 3l9 6.75V21a1 1 0 01-1 1H4a1 1 0 01-1-1V9.75z" />
+        <path d="M9 22V12h6v10" />
+      </svg>
+
+      <span class="bottom-nav__label">Home</span>
+
+    </a>
+
+    <!-- GALLERY -->
+    <a href="#gallery" class="bottom-nav__item" aria-label="View our work">
+      
+      <svg class="bottom-nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect x="3" y="3" width="7" height="7" rx="1" />
+        <rect x="14" y="3" width="7" height="7" rx="1" />
+        <rect x="3" y="14" width="7" height="7" rx="1" />
+        <rect x="14" y="14" width="7" height="7" rx="1" />
+      </svg>
+      
+      <span class="bottom-nav__label">Gallery</span>
+    </a>
+
+    <!-- REVIEWS -->
+    <a href="#reviews" class="bottom-nav__item" aria-label="Read our reviews">
+    
+      <svg class="bottom-nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+      </svg>
+      <span class="bottom-nav__label">Reviews</span>
+
+    </a>
+
+    <!-- CONTACT -->
+    <a href="#contact" class="bottom-nav__item" aria-label="Contact us">
+      
+      <svg class="bottom-nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+      </svg>
+      <span class="bottom-nav__label">Contact</span>
+
+    </a>
+
+  </nav>
+  
+  
+    <main id="main-content">
+
+        <!-- HERO — slider + overlay + content all wrapped together -->
+        <section id="home" class="section section--hero hero">
+
+            <div class="hero-slides">
+
+                <div class="slide active">
+                    <img src="asset/images/innerBar.webp"
+                    alt="Isyem Interior"
+                    fetchpriority="high"
+                    class="slide-img"/>
+                </div>
+            
+                <div class="slide" style="background-image: url('asset/images/TvConsole.webp')"></div>
+                <div class="slide" style="background-image: url('asset/images/mordern-kitchen.webp')"></div>
+                <div class="slide" style="background-image: url('asset/images/passage-wardrobe.webp')"></div>
+                <div class="slide" style="background-image: url('asset/images/six-seater.webp')"></div>
+            </div>
+
+        <div class="hero-overlay"></div>
+
+            <div class="hero__content">
+                <span class="hero__eyebrow">Interior Design & Furniture</span>
+                <h1 class="hero__heading">Spaces That Tell Your Story</h1>
+                <p class="hero__subheading">We design and furnish homes that feel like you — refined, intentional, and built to last.</p>
+            
+                <div class="hero__cta-group">
+                    <a href="#gallery" class="btn-primary">What we offer</a>
+                    <a href="asset/images/CAC_certificate.jpeg" class="btn-secondary" target="_blank" rel="noopener noreferrer">
+                    <i class="ri-shield-check-line"></i>
+                    CAC Registered
+                    </a>
+                </div>
+            
+            </div>
+
+        </section>
+
+        <!-- Gallery -->
+        <section class="gallery" id="gallery">
+
+            <div class="section-header">
+
+            <span class="section-eyebrow">Our Showcase</span>
+            <h2 class="section-title">Spaces We Have Crafted</h2>
+            <p class="section-sub">A glimpse into the world of Sleaq — living rooms, bedrooms, kitchens and workspaces brought to life.</p>
+        
+            </div>
+
+            <div class="gallery-grid">
+            
+                <div class="gallery-item">
+
+                    <a href="asset/images/BrownTvConsole.webp" class="glightbox">
+                        <img 
+                        src="asset/images/BrownTvConsole.webp" 
+                        srcset="asset/images/BrownTvConsole-small.webp 624w,
+                        asset/images/BrownTvConsole.webp 1440w"
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                        loading="lazy"
+                        alt="Brown TV Console" />
+                    </a>
+
+                </div>
+
+                <div class="gallery-item">
+
+                    <a href="https://res.cloudinary.com/da57udkac/video/upload/v1774619829/tvConsole_eilebx.mp4" class="glightbox" data-type="video">
+                        
+                        <video 
+                            src="https://res.cloudinary.com/da57udkac/video/upload/v1774619829/tvConsole_eilebx.mp4" 
+                            muted playsinline preload="none"
+                            poster="asset/Thumbnails/BrownTVconsole.png"
+                            >
+                            <source src = "https://res.cloudinary.com/da57udkac/video/upload/v1774619829/tvConsole_eilebx.mp4" type="video/mp4">
+                        </video>
+
+                        <div class="play-btn">
+                            <i class="ri-play-circle-fill"></i>
+                        </div>
+
+                    </a>
+
+                </div>
+
+                <div class="gallery-item">
+
+                    <a href="asset/images/LightWardrobe.webp" class="glightbox">
+                        <img 
+                        src="asset/images/LightWardrobe.webp" 
+                        srcset="asset/images/LightWardrobe-small.webp 624w,
+                        asset/images/LightWardrobe.webp 1440w"
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                        loading="lazy"
+                        alt="Light Wardrobe" />
+                    </a>
+
+                </div>
+
+                <div class="gallery-item">
+
+                    <a href="https://res.cloudinary.com/da57udkac/video/upload/v1774619883/WhiteKitchen_p2ppo8.mp4" class="glightbox" data-type="video">
+                        
+                        <video
+                            src="https://res.cloudinary.com/da57udkac/video/upload/v1774619883/WhiteKitchen_p2ppo8.mp4" 
+                            muted playsinline preload="none"
+                            poster="asset/Thumbnails/WhiteKitchen.png"
+                            >
+                            <source src = "https://res.cloudinary.com/da57udkac/video/upload/v1774619883/WhiteKitchen_p2ppo8.mp4" type="video/mp4">
+                        </video>
+
+                        <div class="play-btn">
+                            <i class="ri-play-circle-fill"></i>
+                        </div>
+
+                    </a>
+
+                </div>
+
+                <div class="gallery-item">
+
+                    <a href="asset/images/Kitchen-Center-Cabinet.webp" class="glightbox">
+                        <img 
+                        src="asset/images/Kitchen-Center-Cabinet.webp" 
+                        srcset="asset/images/Kitchen-Center-Cabinet-small.webp 624w,
+                        asset/images/Kitchen-Center-Cabinet.webp 1440w"
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                        loading="lazy"
+                        alt="Kitchen-Center-Cabinet" />
+                    </a>
+
+                </div>
+
+                <div class="gallery-item">
+
+                    <a href="https://res.cloudinary.com/da57udkac/video/upload/v1774619745/Isyem_lilkfz.mp4" class="glightbox" data-type="video">  
+                        <video
+                            src="https://res.cloudinary.com/da57udkac/video/upload/v1774619745/Isyem_lilkfz.mp4" 
+                            muted playsinline preload="none"
+                            poster="asset/Thumbnails/Isyem.png"
+                            >
+                            <source src = "https://res.cloudinary.com/da57udkac/video/upload/v1774619745/Isyem_lilkfz.mp4" type="video/mp4">
+                        </video>
+
+                        <div class="play-btn">
+                            <i class="ri-play-circle-fill"></i>
+                        </div>
+                    </a>
+
+                </div>
+
+                <div class="gallery-item">
+
+                    <a href="asset/images/TvConsoleWhite.webp" class="glightbox">
+                        <img 
+                        src="asset/images/TvConsoleWhite.webp" 
+                        srcset="asset/images/TvConsoleWhite-small.webp 624w,
+                        asset/images/TvConsoleWhite.webp 1440w"
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                        loading="lazy"
+                        alt="White TV Console" />
+                    </a>
+
+                </div>
+
+                <div class="gallery-item">
+
+                    <a href="https://res.cloudinary.com/da57udkac/video/upload/v1774619421/dope_yauwgr.mp4" class="glightbox" data-type="video">
+                        
+                        <video 
+                            src="https://res.cloudinary.com/da57udkac/video/upload/v1774619421/dope_yauwgr.mp4" 
+                            muted playsinline preload="none"
+                            poster="asset/Thumbnails/Dope.png"
+                            >
+                            <source src = "https://res.cloudinary.com/da57udkac/video/upload/v1774619421/dope_yauwgr.mp4" type="video/mp4">
+                        </video>
+
+                        <div class="play-btn">
+                            <i class="ri-play-circle-fill"></i>
+                        </div>
+
+                    </a>
+
+                </div>
+
+                <div class="gallery-item">
+
+                    <a href="asset/images/cozyWardrobe.webp" class="glightbox">
+                        <img 
+                        src="asset/images/cozyWardrobe.webp" 
+                        srcset="asset/images/cozyWardrobe-small.webp 624w,
+                        asset/images/cozyWardrobe.webp 1440w"
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                        loading="lazy"
+                        alt="Cozy Wardrobe" />
+                    </a>
+
+                </div>
+
+                <div class="gallery-item">
+
+                    <a href="asset/images/moderate kitchen.webp" class="glightbox">
+                        <img 
+                        src="asset/images/moderate kitchen.webp" 
+                        srcset="asset/images/moderate kitchen-small.webp 624w,
+                        asset/images/moderate kitchen.webp 1440w"
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                        loading="lazy"
+                        alt="Moderate Kitchen" />
+                    </a>
+
+                </div>
+                
+                <div class="gallery-item">
+
+                    <a href="https://res.cloudinary.com/da57udkac/video/upload/v1774619856/tiled_efqrmj.mp4" class="glightbox" data-type="video">
+                        
+                        <video 
+                            src="https://res.cloudinary.com/da57udkac/video/upload/v1774619856/tiled_efqrmj.mp4" 
+                            muted playsinline preload="none"
+                            poster="asset/Thumbnails/Tiled.png"
+                            >
+                            <source src = "https://res.cloudinary.com/da57udkac/video/upload/v1774619856/tiled_efqrmj.mp4" type="video/mp4">
+                        </video>
+
+                        <div class="play-btn">
+                            <i class="ri-play-circle-fill"></i>
+                        </div>
+
+                    </a>
+
+                </div>
+
+                <div class="gallery-item">
+
+                    <a href="asset/images/six-seater.webp" class="glightbox">
+                        <img 
+                        src="asset/images/six-seater.webp" 
+                        srcset="asset/images/six-seater-small.webp 624w,
+                        asset/images/six-seater.webp 1440w"
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                        loading="lazy"
+                        alt="Six-Seater" />
+                    </a>
+
+                </div>
+
+                <!-- <div class="gallery-item">
+
+                    <a href="asset/images/hero-bg3.webp" class="glightbox">
+                        <img src="asset/images/hero-bg3.webp" alt="Living room cabinet" />
+                    </a>
+
+                </div>
+
+                <div class="gallery-item">
+
+                    <a href="asset/videos/FullKitchenCabinet.mp4" class="glightbox" data-type="video">
+                        <video src="asset/videos/FullKitchenCabinet.mp4" muted autoplay loop playsinline></video>
+                    </a>
+
+                </div>
+
+                <div class="gallery-item">
+
+                    <a href="asset/images/hero-bg.webp" class="glightbox">
+                        <img src="asset/images/hero-bg.webp" alt="Living room" />
+                    </a>
+
+                </div>
+                
+                <div class="gallery-item">
+
+                    <a href="asset/videos/TvConsoleMakeOver.mp4" class="glightbox" data-type="video">
+                        <video src="asset/videos/TvConsoleMakeOver.mp4" muted autoplay loop playsinline></video>
+                    </a>
+
+                </div>
+                
+                <div class="gallery-item">
+
+                    <a href="asset/videos/PassageWardrobe.mp4" class="glightbox" data-type="video">
+                        <video src="asset/videos/PassageWardrobe.mp4" muted autoplay loop playsinline></video>
+                    </a>
+
+                </div>
+            
+                <div class="gallery-item">
+
+                    <a href="asset/videos/Dinning.mp4" class="glightbox" data-type="video">
+                        <video src="asset/videos/Dinning.mp4" muted autoplay loop playsinline></video>
+                    </a>
+
+                </div>
+            
+                <div class="gallery-item">
+
+                    <a href="asset/videos/LightKitchenCabinet.mp4" class="glightbox" data-type="video">
+                        <video src="asset/videos/LightKitchenCabinet.mp4" muted autoplay loop playsinline></video>
+                    </a>
+
+                </div>
+
+                <div class="gallery-item">
+
+                    <a href="https://res.cloudinary.com/da57udkac/video/upload/v1774619892/simpleStyled_n9waj4.mp4" class="glightbox" data-type="video">
+                        
+                        <video 
+                            src="https://res.cloudinary.com/da57udkac/video/upload/v1774619892/simpleStyled_n9waj4.mp4" 
+                            muted playsinline preload="none"
+                            poster="asset/Thumbnails/tiled.png"
+                            >
+                            <source src = "https://res.cloudinary.com/da57udkac/video/upload/v1774619892/simpleStyled_n9waj4.mp4" type="video/mp4">
+                        </video>
+
+                        <div class="play-btn">
+                            <i class="ri-play-circle-fill"></i>
+                        </div>
+
+                </div> -->
+            </div>
+
+
+            <div class="load-more-wrapper">
+                <button class="btn-load-more" id="loadMoreBtn">Load More</button>
+            </div>
+
+        </section>
+    </main>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
