@@ -22,26 +22,26 @@
     This nav is hidden on mobile (display: none).
     On screens 768px and wider, it becomes visible at the top.
   -->
-  <header class="top-nav">
-    <div class="top-nav__inner">
+    <header class="top-nav">
+        <div class="top-nav__inner">
 
-      <!-- LOGO  -->
-      <a href="#home" class="top-nav__logo">
-        <span class="logo-text">Isyem</span>
-        <span class="logo-sub">Interiors</span>
-      </a>
+            <!-- LOGO  -->
+            <a href="#home" class="top-nav__logo">
+                <span class="logo-text">Isyem</span>
+                <span class="logo-sub">Interiors</span>
+            </a>
 
-      <!-- DESKTOP NAV LINKS -->
-      <nav class="top-nav__links" aria-label="Main navigation">
-        <a href="#home" class="nav-link active">Home</a>
-        <a href="#gallery" class="nav-link">Gallery</a>
-        <a href="#reviews" class="nav-link">Reviews</a>
-        <a href="#about" class="nav-link">About</a>
-        <a href="#contact" class="nav-link nav-link--cta">Contact Us</a>
-      </nav>
+            <!-- DESKTOP NAV LINKS -->
+            <nav class="top-nav__links" aria-label="Main navigation">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#reviews" class="nav-link">Reviews</a>
+                <a href="#contact" class="nav-link nav-link--cta">Contact Us</a>
+            </nav>
 
-    </div>
-  </header>
+        </div>
+    </header>
 
   <!--
     MOBILE BOTTOM NAV
@@ -49,58 +49,70 @@
     Hidden on desktop (display: none via media query).
     Each item has an SVG icon + a label.
   -->
-  <nav class="bottom-nav" aria-label="Mobile navigation">
+    <nav class="bottom-nav" aria-label="Mobile navigation">
 
-    <!-- HOME -->
-    <a href="#home" class="bottom-nav__item active" aria-label="Go to Home">
+        <!-- HOME -->
+        <a href="#home" class="bottom-nav__item active" aria-label="Go to Home">
 
-      <svg class="bottom-nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <path d="M3 9.75L12 3l9 6.75V21a1 1 0 01-1 1H4a1 1 0 01-1-1V9.75z" />
-        <path d="M9 22V12h6v10" />
-      </svg>
+            <svg class="bottom-nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M3 9.75L12 3l9 6.75V21a1 1 0 01-1 1H4a1 1 0 01-1-1V9.75z" />
+                <path d="M9 22V12h6v10" />
+            </svg>
 
-      <span class="bottom-nav__label">Home</span>
+        <span class="bottom-nav__label">Home</span>
 
-    </a>
+        </a>
 
-    <!-- GALLERY -->
-    <a href="#gallery" class="bottom-nav__item" aria-label="View our work">
-      
-      <svg class="bottom-nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <rect x="3" y="3" width="7" height="7" rx="1" />
-        <rect x="14" y="3" width="7" height="7" rx="1" />
-        <rect x="3" y="14" width="7" height="7" rx="1" />
-        <rect x="14" y="14" width="7" height="7" rx="1" />
-      </svg>
-      
-      <span class="bottom-nav__label">Gallery</span>
-    </a>
+        <!-- GALLERY -->
+        <a href="#gallery" class="bottom-nav__item" aria-label="View our work">
+        
+            <svg class="bottom-nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="3" width="7" height="7" rx="1" />
+                <rect x="14" y="3" width="7" height="7" rx="1" />
+                <rect x="3" y="14" width="7" height="7" rx="1" />
+                <rect x="14" y="14" width="7" height="7" rx="1" />
+            </svg>
+        
+        <span class="bottom-nav__label">Gallery</span>
+        </a>
 
-    <!-- REVIEWS -->
-    <a href="#reviews" class="bottom-nav__item" aria-label="Read our reviews">
-    
-      <svg class="bottom-nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-      </svg>
-      <span class="bottom-nav__label">Reviews</span>
+        <!-- About Us -->
+        <a href="#about" class="bottom-nav__item" aria-label="About us">
+            
+            <svg class="bottom-nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="8" r="4" />
+                <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
+            </svg>
+            <span class="bottom-nav__label">About</span>
+        </a>
 
-    </a>
 
-    <!-- CONTACT -->
-    <a href="#contact" class="bottom-nav__item" aria-label="Contact us">
-      
-      <svg class="bottom-nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
-      </svg>
-      <span class="bottom-nav__label">Contact</span>
+        <!-- REVIEWS -->
+        <a href="#reviews" class="bottom-nav__item" aria-label="Read our reviews">
+        
+            <svg class="bottom-nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg>
+            <span class="bottom-nav__label">Reviews</span>
 
-    </a>
+        </a>
 
-  </nav>
+        <!-- CONTACT -->
+        <a href="#contact" class="bottom-nav__item" aria-label="Contact us">
+        
+            <svg class="bottom-nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+            </svg>
+        <span class="bottom-nav__label">Contact</span>
+
+        </a>
+
+    </nav>
   
   
     <main id="main-content">
@@ -147,9 +159,9 @@
 
             <div class="section-header">
 
-            <span class="section-eyebrow">Our Showcase</span>
-            <h2 class="section-title">Spaces We Have Crafted</h2>
-            <p class="section-sub">A glimpse into the world of Sleaq — living rooms, bedrooms, kitchens and workspaces brought to life.</p>
+                <span class="section-eyebrow">Our Showcase</span>
+                <h2 class="section-title">Spaces We Have Crafted</h2>
+                <p class="section-sub">A glimpse into the world of Sleaq — living rooms, bedrooms, kitchens and workspaces brought to life.</p>
         
             </div>
 
