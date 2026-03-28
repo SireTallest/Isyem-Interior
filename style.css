@@ -881,7 +881,7 @@ JS adds/removes this class on load more */
 /* REVIEWS GRID */
 .reviews__grid {
   display: grid;
-  grid-template-columns: 1fr;   /* 1 column on mobile */
+  grid-template-columns: 1fr;  
   gap: 24px;
   max-width: 1100px;
   margin: 0 auto;
@@ -897,6 +897,7 @@ JS adds/removes this class on load more */
   gap: 20px;
   border: 1px solid var(--color-border);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
 .review-card:hover {
@@ -937,8 +938,8 @@ JS adds/removes this class on load more */
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background-color: var(--color-bg-subtle);
-  border: 1px solid var(--color-border);
+  background-color: white ;
+  border: 1px solid #3e3d3d;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -968,9 +969,7 @@ JS adds/removes this class on load more */
   letter-spacing: 0.03em;
 }
 
-/* =============================================
-   REVIEWS — DESKTOP
-   ============================================= */
+/* REVIEWS — DESKTOP */
 
 @media (min-width: 768px) {
   .reviews {
@@ -990,4 +989,29 @@ JS adds/removes this class on load more */
   .reviews__grid {
     grid-template-columns: repeat(3, 1fr);  /* 3 columns on desktop */
   }
+}
+
+.google-verify {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  font-size: .78rem;
+  color: var(--WarmNeutral);
+  text-decoration: none;
+  margin-top: .5rem;
+  transition: color 0.3s ease;
+}
+
+.google-verify:hover {
+  color: var(--orangeAccent);
+}
+
+.google-logo {
+  height: 48px;
+  width: auto;
+}
+.google-verify .verify{
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: underline;
 }
