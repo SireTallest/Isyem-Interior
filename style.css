@@ -716,7 +716,7 @@ JS adds/removes this class on load more */
 }
 
 .btn-load-more {
-  background: #000;
+  background: #3e3d3d;
   color: #fff;
   border: 2px solid white;
   padding: 12px 36px;
@@ -733,9 +733,261 @@ JS adds/removes this class on load more */
 .btn-load-more:hover {
   background-color: #fff;
   color: #000;
-  border: 2px solid black;
+  border: 2px solid #3e3d3d;
 }
 
 .btn-load-more.hidden {
   display: none;
+}
+
+
+/* =============================================
+   ABOUT SECTION
+   ============================================= */
+
+.about {
+  padding: 80px 24px;
+  background-color: #3e3d3d;
+  color: #ffffff;
+}
+
+/* CONTAINER — stacked on mobile, side by side on desktop */
+.about__container {
+  display: flex;
+  flex-direction: column;   /* stacked on mobile */
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* LEFT — IMAGE */
+.about__image-wrap {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;     /* portrait ratio — good for a person photo */
+}
+
+.about__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;    /* keeps face visible when cropped */
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.about__image:hover {
+  transform: scale(1.03);
+}
+
+/* RIGHT — CONTENT */
+.about__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.about__text {
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: var(--color-ink-muted);
+  line-height: 1.8;
+}
+
+/* STATS ROW */
+.about__stats {
+  display: flex;
+  gap: 32px;
+  margin-top: 8px;
+  flex-wrap: wrap;          /* wraps on very small screens */
+}
+
+.about__stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.about__stat-number {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  line-height: 1;
+}
+
+.about__stat-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-ink-muted);
+}
+
+/* ABOUT — DESKTOP */
+
+@media (min-width: 768px) {
+  .about {
+    padding: 100px 40px;
+  }
+
+  .about__container {
+    flex-direction: row;    /* side by side on desktop */
+    align-items: center;
+    gap: 80px;
+  }
+
+  /* Image takes up 45% of the width */
+  .about__image-wrap {
+    flex: 0 0 45%;
+  }
+
+  /* Content takes the remaining space */
+  .about__content {
+    flex: 1;
+  }
+
+  .about__text {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about {
+    padding: 100px 80px;
+  }
+
+  .about__stat-number {
+    font-size: 3rem;
+  }
+}
+
+/* =============================================
+   REVIEWS SECTION
+   ============================================= */
+
+.reviews {
+  padding: 80px 24px;
+  background-color: var(--color-bg-subtle);
+}
+
+.reviews__header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+/* REVIEWS GRID */
+.reviews__grid {
+  display: grid;
+  grid-template-columns: 1fr;   /* 1 column on mobile */
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* REVIEW CARD */
+.review-card {
+  background-color: var(--color-white);
+  border-radius: 8px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 1px solid var(--color-border);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-4px);      /* lifts card slightly on hover */
+  box-shadow: 0 12px 32px rgba(26, 23, 20, 0.08);
+}
+
+/* STARS */
+.review-card__stars {
+  display: flex;
+  gap: 4px;
+}
+
+.review-card__stars i {
+  font-size: 16px;
+  color: gold;       
+}
+
+/* REVIEW TEXT */
+.review-card__text {
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: var(--color-ink-muted);
+  line-height: 1.8;
+  flex: 1;                          /* pushes author to bottom of card */
+  font-style: italic;
+}
+
+/* AUTHOR ROW */
+.review-card__author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* AVATAR — initials circle */
+.review-card__avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--color-bg-subtle);
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  flex-shrink: 0;                   /* never shrinks below 44px */
+  letter-spacing: 0.05em;
+}
+
+.review-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.review-card__name {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-ink);
+}
+
+.review-card__location {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--color-ink-muted);
+  letter-spacing: 0.03em;
+}
+
+/* =============================================
+   REVIEWS — DESKTOP
+   ============================================= */
+
+@media (min-width: 768px) {
+  .reviews {
+    padding: 100px 40px;
+  }
+
+  .reviews__grid {
+    grid-template-columns: repeat(2, 1fr);  /* 2 columns on tablet */
+  }
+}
+
+@media (min-width: 1024px) {
+  .reviews {
+    padding: 100px 80px;
+  }
+
+  .reviews__grid {
+    grid-template-columns: repeat(3, 1fr);  /* 3 columns on desktop */
+  }
 }
