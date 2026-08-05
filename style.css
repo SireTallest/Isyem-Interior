@@ -172,7 +172,7 @@ a {
 }
 
 .nav-link--cta:hover {
-  background-color: #3e3d3d;;
+  background-color: #3e3d3d;
   color:var(--color-white);
   border: 2px solid var(--color-white);
 }
@@ -198,7 +198,7 @@ a {
   right: 0;
   z-index: 100;
   height: var(--nav-height-bottom);
-  background-color: #3e3d3d;;
+  background-color: #3e3d3d;
   border-top: 1px solid var(--color-sand);
 
   /*
@@ -1245,6 +1245,8 @@ JS adds/removes this class on load more */
 .contact__item-icon .ri-mail-line{
   color: #D44638;
 }
+
+
 /* CONTACT — DESKTOP*/
 
 @media (min-width: 768px) {
@@ -1291,4 +1293,227 @@ JS adds/removes this class on load more */
 .social-link.facebook {
   background: #1877f2;   
   color: #ffff;
+}
+
+/* =============================================
+   FOOTER
+   ============================================= */
+
+.footer {
+  background-color:#3e3d3d;   /* deep warm dark background */
+  color: var(--color-white);
+  padding: 80px 24px 0;
+}
+
+.footer__container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* =============================================
+   FOOTER TOP — 3 columns
+   ============================================= */
+
+.footer__top {
+  display: grid;
+  grid-template-columns: 1fr;   /* stacked on mobile */
+  gap: 48px;
+  padding-bottom: 64px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* COLUMN 1: BRAND */
+.footer__logo-img {
+  height: 50px;
+  width: auto;
+  margin-bottom: 16px;
+  /* logo might have dark bg — filter makes it visible on dark footer */
+  filter: brightness(0) invert(1);
+}
+
+.footer__tagline {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--color-accent);
+  margin-bottom: 12px;
+}
+
+.footer__brand-desc {
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.8;
+  max-width: 280px;
+}
+
+/* COLUMN TITLES */
+.footer__col-title {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 24px;
+}
+
+/* COLUMN 2: QUICK LINKS */
+.footer__links ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer__links ul li a {
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: color 0.2s ease, padding-left 0.2s ease;
+  display: inline-block;
+}
+
+.footer__links ul li a:hover {
+  color: var(--color-accent);
+  padding-left: 6px;    /* subtle slide right on hover */
+}
+
+/* COLUMN 3: LOCATION */
+.footer__location {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer__address {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer__address i {
+  font-size: 18px;
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+/* MAP */
+.footer__map-link {
+  display: block;
+  text-decoration: none;
+  margin-top: 8px;
+}
+
+.footer__map-embed {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer__map-embed iframe {
+  display: block;
+  width: 100%;
+  height: 200px;
+  pointer-events: none;   /* prevents iframe from capturing clicks */
+}
+
+/* Overlay on map — shows "Open in Google Maps" on hover */
+.footer__map-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(26, 23, 20, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--color-white);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.footer__map-link:hover .footer__map-overlay {
+  opacity: 1;             /* shows overlay on hover */
+}
+
+.footer__map-overlay i {
+  font-size: 28px;
+  color: var(--color-accent);
+}
+
+.footer__map-overlay span {
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* =============================================
+   FOOTER BOTTOM — Copyright + Developer
+   ============================================= */
+
+.footer__bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 24px 0;
+  text-align: center;
+}
+
+.footer__copyright {
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.footer__developer {
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.footer__developer a {
+  color: var(--color-accent);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.footer__developer a:hover {
+  color: var(--color-white);
+}
+
+/* =============================================
+   FOOTER — DESKTOP
+   ============================================= */
+
+@media (min-width: 768px) {
+  .footer {
+    padding: 100px 40px 0;
+  }
+
+  .footer__top {
+    grid-template-columns: 1.5fr 1fr 1.5fr;  /* 3 columns on desktop */
+    gap: 64px;
+  }
+
+  .footer__bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer {
+    padding: 100px 80px 0;
+  }
 }
