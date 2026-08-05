@@ -1181,7 +1181,7 @@ JS adds/removes this class on load more */
 .contact__item-value {
   font-size: 0.9rem;
   font-weight: 400;
-  color: var(--color-ink);
+  color:#000;
 }
 
 /* =============================================
@@ -1212,7 +1212,7 @@ JS adds/removes this class on load more */
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  border: 1px solid var(--color-border);
+  border: 2px solid white;
   background-color: var(--color-bg-subtle);
   display: flex;
   align-items: center;
@@ -1220,18 +1220,31 @@ JS adds/removes this class on load more */
   color: var(--color-ink-muted);
   text-decoration: none;
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+
 }
 
 .social-link:hover {
   background-color: var(--color-accent);
   color: var(--color-white);
   border-color: var(--color-accent);
+  transform: translateY(4px);
+  transition:all 0.6s ease;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.9);
 }
 
 .social-link i {
   font-size: 20px;
 }
 
+.contact__item-icon .ri-whatsapp-line{
+  color: #25D366;
+}
+.contact__item-icon .ri-phone-line{
+  color: #3e3d3d;
+}
+.contact__item-icon .ri-mail-line{
+  color: #D44638;
+}
 /* CONTACT — DESKTOP*/
 
 @media (min-width: 768px) {
@@ -1260,4 +1273,22 @@ JS adds/removes this class on load more */
   .contact {
     padding: 100px 80px;
   }
+}
+
+.social-link.instagram {
+  background: #ac62a8;
+  color: #ffff;
+}
+.social-link.tiktok {
+  background: #000;
+  color:#ffff;
+}
+
+.social-link.youtube {
+  background: #ff0000;   
+  color: #ffff;
+}
+.social-link.facebook {
+  background: #1877f2;   
+  color: #ffff;
 }
