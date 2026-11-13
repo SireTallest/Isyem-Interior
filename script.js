@@ -57,7 +57,7 @@ setInterval(() => {
   slides[current].classList.add('active');
 }, 5000);
 
-const lightbox = lightbox({
+const lightbox = GLightbox({
   touchNavigation: true,
   loop: true,
   autoplayVideos: true
@@ -66,7 +66,7 @@ const lightbox = lightbox({
 const galleryItems = document.querySelectorAll('.gallery-item');
 const loadMoreBtn = document.getElementById('loadMoreBtn');
 const itemsPerLoad = 3;
-let visibleCount = 5;
+let visibleCount = 6;
 
 //  hide everything beyond the first 6 on page load
 galleryItems.forEach((item, index) => {
