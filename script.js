@@ -97,3 +97,29 @@ loadMoreBtn.addEventListener('click', () => {
   }
 
 });
+
+// ===== CONTACT FORM → WHATSAPP =====
+
+const contactForm = document.getElementById('contactForm');
+const phoneNumber = '+2348163857689';
+
+contactForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const message = document.getElementById('message').value.trim();
+  const whatsappMessage =
+`Hello Isyem! 👋
+
+*Name:* ${name}
+*Email:* ${email}
+*Phone:* ${phone || 'Not provided'}
+*Message:*
+${message}`;
+  const encodedMessage = encodeURIComponent(whatsappMessage);
+  window.location.href = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+});
+
+// Auto-update of the copyright year in the footer
+document.getElementById('currentYear').textContent = new Date().getFullYear();
